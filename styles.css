@@ -1,0 +1,159 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+main {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-content {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.character {
+  display: flex;
+  margin-bottom: 40px; /* Add margin between character sections */
+}
+
+.character img {
+  max-width: 200px; /* Adjust image size as needed */
+  float: left;
+  margin-right: 20px; /* Add spacing between image and text */
+}
+
+.character-info {
+  overflow: hidden; /* Clear the float */
+}
+
+.character h2 {
+  /* Title styling */
+}
+
+.character p {
+  /* Text styling */
+}
+
+/* Center the video and make it slightly larger */
+video {
+  display: block;
+  margin: 0 auto;
+  width: 70%; /* You can adjust the width as needed */
+}
+
+
+.episode-list li {
+  width: calc(100% - 1px); /* Four episodes per row with a small gap */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000; /* Set the text color to black */
+}
+
+/* Style video */
+.video-container {
+  width: 48%; /* Adjust the width to make 2 episodes fit per row */
+  margin: 1%; /* Add some spacing between episodes */
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Style video iframes */
+.video-container iframe {
+  max-width: 100%; /* Make the video responsive */
+  height: auto;
+}
+
+/* Style episode titles */
+.video-container a {
+  text-decoration: none;
+  color: black; /* Set text color to black */
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-top: 5px; /* Add a little gap between video and title */
+}
+
+/* Hover effect for episode titles */
+.video-container a:hover {
+  color: #0056b3; /* Change link hover color as needed */
+}
+
+
